@@ -1,3 +1,5 @@
+#collectors.__init__.py
+
 from .downloader import build_zip_url, cargar_grafo_desde_url
 from .metrics_extractor import extraer_estadisticas_red
 from .parser import leer_archivo_edges
