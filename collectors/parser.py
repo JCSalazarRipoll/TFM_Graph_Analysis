@@ -11,21 +11,17 @@ from collectors.downloader import (
 
 import pandas as pd
 
-def url_dataframe(urls_php: list, head_url: str) -> pd.DataFrame:
-    """
-    Procesa una lista de URLs individuales de grafos, extrae sus métricas
-    y devuelve un DataFrame solo con los grafos válidos.
-    """
-    registros = []
-
-    for url_php in urls_php:
-        datos = extraer_datos_de_url(url_php, head_url)
-        if datos:
-            registros.append(datos)
-
-    df = pd.DataFrame(registros)
-    return df
-
+def leer_archivo_edges(path: str):
+    edges = []
+    with open(path, 'r') as f:
+        for line in f:
+            parts = line.strip().split()
+            if len(parts) >= 2:
+                try:
+                    edges.append((int(parts[0]), int(parts[1])))
+                except ValueError:
+                    continue
+    return edges
 
 def extraer_datos_de_url(url_php: str, head_url: str) -> dict | None:
     """
@@ -77,14 +73,20 @@ def extraer_datos_de_url(url_php: str, head_url: str) -> dict | None:
         return None
 
 
-def leer_archivo_edges(path: str):
-    edges = []
-    with open(path, 'r') as f:
-        for line in f:
-            parts = line.strip().split()
-            if len(parts) >= 2:
-                try:
-                    edges.append((int(parts[0]), int(parts[1])))
-                except ValueError:
-                    continue
-    return edges
+
+
+def url_dataframe(urls_php: list, head_url: str) -> pd.DataFrame:
+    """
+    Procesa una lista de URLs individuales de grafos, extrae sus métricas
+    y devuelve un DataFrame solo con los grafos válidos.
+    """
+    registros = []
+
+    for url_php in urls_php:
+        datos = extraer_datos_de_url(url_php, head_url)
+        if datos:
+            registros.append(datos)
+
+    df = pd.DataFrame(registros)
+    return df
+
