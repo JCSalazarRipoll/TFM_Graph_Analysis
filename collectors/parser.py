@@ -7,22 +7,22 @@ def extraer_datos_de_url(url_php: str, head_url: str) -> dict | None:
     """
 
     url_zip, nombre_base = build_zip_url(head_url, url_php)
-    print(f"▶️ Procesando: {nombre_base}")
+    print(f" Procesando: {nombre_base}")
 
     try:
         G = cargar_grafo_desde_url(url_zip)
         if G is None:
-            print(f"❌ No se pudo cargar el grafo desde ZIP: {url_zip}")
+            print(f" No se pudo cargar el grafo desde ZIP: {url_zip}")
             return None
 
         estadisticas = extraer_estadisticas_red(url_php)
 
         if not estadisticas_completas(estadisticas):
-            print(f"⚠️ Grafo {nombre_base} ignorado: métricas incompletas")
+            print(f" Grafo {nombre_base} ignorado: métricas incompletas")
             return None
 
         avg_shortest_path_length = mean_node_distance(G)
-        print(f"✅ Grafo válido. Distancia promedio: {avg_shortest_path_length:.4f}")
+        print(f" Grafo válido. Distancia promedio: {avg_shortest_path_length:.4f}")
 
         datos_grafo = {
             'name': nombre_base,
@@ -46,7 +46,7 @@ def extraer_datos_de_url(url_php: str, head_url: str) -> dict | None:
         return datos_grafo
 
     except Exception as e:
-        print(f"🛑 Error al procesar {url_php}: {e}")
+        print(f" Error al procesar {url_php}: {e}")
         return None
 
 
