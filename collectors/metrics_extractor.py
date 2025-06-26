@@ -1,6 +1,7 @@
 import requests
 import re
 from bs4 import BeautifulSoup
+import networkx as nx
 
 def estadisticas_completas(estadisticas: dict) -> bool:
     """
@@ -53,3 +54,19 @@ def extraer_estadisticas_red(url):
     }
 
     return {k: re.search(v, stats_text).group(1) for k, v in patrones.items() if re.search(v, stats_text)}
+
+def mean_node_distance(G: nx.Graph) -> float:
+    """
+    Calcula la distancia promedio entre todos los pares de nodos en un grafo.
+    Si el grafo no está conectado, calcula la media sobre el componente gigante.
+    """
+    if not nx.is_connected(G):
+        # Tomar el componente conexo más grande
+        G = G.subgraph(max(nx.connected_components(G), key=len)).copy()
+
+    try:
+        return nx.average_shortest_path_length(G)
+    except Exception as e:
+        print(f"Error al calcular la distancia promedio: {e}")
+        return -1
+
