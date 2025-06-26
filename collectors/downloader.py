@@ -5,7 +5,7 @@ import zipfile
 import requests
 import scipy.io
 import networkx as nx
-from .parser import leer_archivo_edges
+from .utils import leer_archivo_edges
 
 def build_zip_url(from_page_url: str, download_php_url: str):
     from urllib.parse import urlparse
