@@ -1,3 +1,5 @@
+#collectors/parser.py
+
 from collectors.metrics_extractor import (
     extraer_estadisticas_red,
     estadisticas_completas,
