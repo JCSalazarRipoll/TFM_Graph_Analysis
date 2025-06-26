@@ -2,6 +2,20 @@ import requests
 import re
 from bs4 import BeautifulSoup
 
+def estadisticas_completas(estadisticas: dict) -> bool:
+    """
+    Verifica si las estadísticas del grafo tienen exactamente las 14 métricas esperadas.
+    """
+    METRICAS_ESPERADAS = [
+        "Nodes", "Edges", "Density", "Maximum degree", "Minimum degree",
+        "Average degree", "Assortativity", "Number of triangles",
+        "Average number of triangles", "Maximum number of triangles",
+        "Average clustering coefficient", "Fraction of closed triangles",
+        "Maximum k-core", "Lower bound of Maximum Clique"
+    ]
+    return all(m in estadisticas for m in METRICAS_ESPERADAS)
+
+
 def extraer_estadisticas_red(url):
     headers = {
         "User-Agent": (
