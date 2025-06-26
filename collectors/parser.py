@@ -1,4 +1,13 @@
-from collectors.metrics_extractor import extraer_estadisticas_red, estadisticas_completas
+from collectors.metrics_extractor import (
+    extraer_estadisticas_red,
+    estadisticas_completas,
+    mean_node_distance,
+)
+
+from collectors.downloader import (
+    build_zip_url,
+    cargar_grafo_desde_url,
+)
 
 def extraer_datos_de_url(url_php: str, head_url: str) -> dict | None:
     """
