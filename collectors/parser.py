@@ -1,12 +1,13 @@
 #collectors/parser.py
 
-from collectors.metrics_extractor import (
+from .metrics_extractor import (
     extraer_estadisticas_red,
     estadisticas_completas,
-    mean_node_distance,
 )
 
-from collectors.downloader import (
+from .graph_metrics import mean_node_distance
+
+from .downloader import (
     build_zip_url,
     cargar_grafo_desde_url,
 )
