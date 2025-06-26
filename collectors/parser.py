@@ -11,18 +11,6 @@ from collectors.downloader import (
 
 import pandas as pd
 
-def leer_archivo_edges(path: str):
-    edges = []
-    with open(path, 'r') as f:
-        for line in f:
-            parts = line.strip().split()
-            if len(parts) >= 2:
-                try:
-                    edges.append((int(parts[0]), int(parts[1])))
-                except ValueError:
-                    continue
-    return edges
-
 def extraer_datos_de_url(url_php: str, head_url: str) -> dict | None:
     """
     Extrae la información de un grafo desde una URL y devuelve un diccionario con sus métricas.
@@ -71,9 +59,6 @@ def extraer_datos_de_url(url_php: str, head_url: str) -> dict | None:
     except Exception as e:
         print(f" Error al procesar {url_php}: {e}")
         return None
-
-
-
 
 def url_dataframe(urls_php: list, head_url: str) -> pd.DataFrame:
     """
