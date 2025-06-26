@@ -1,3 +1,5 @@
+#collectors/graph_metrics.py
+
 import networkx as nx
 
 def mean_node_distance(G: nx.Graph) -> float:
