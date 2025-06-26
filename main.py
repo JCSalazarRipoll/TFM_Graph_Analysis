@@ -1,18 +1,23 @@
 # main.py
 
-from collectors import build_zip_url, cargar_grafo_desde_url, extraer_estadisticas_red
+from collectors.parser import url_dataframe
+import pandas as pd
+
+# Cabecera y lista de URLs
+HEAD_URL = "https://networkrepository.com/asn.php"
+URLS = [
+    "https://networkrepository.com/insecta-ant-colony1-day01.php",
+    "https://networkrepository.com/insecta-ant-colony1-day02.php",
+    "https://networkrepository.com/insecta-ant-colony1-day03.php",
+    "https://networkrepository.com/insecta-ant-colony1-day04.php",
+    "https://networkrepository.com/insecta-ant-colony1-day05.php"
+]
 
 if __name__ == "__main__":
-    graph_php_url = "https://networkrepository.com/insecta-ant-colony1-day01.php"
-    download_php_url = "https://networkrepository.com/download.php?file=insecta-ant-colony1-day01"
+    df = url_dataframe(URLS, HEAD_URL)
 
-    zip_url, name = build_zip_url(graph_php_url, download_php_url)
-    print(f"[INFO] Descargando grafo: {name}")
-    G = cargar_grafo_desde_url(zip_url)
-
-    if G:
-        print(f"[INFO] Grafo cargado con {G.number_of_nodes()} nodos y {G.number_of_edges()} aristas")
-        stats = extraer_estadisticas_red(graph_php_url)
-        print("[INFO] Estadísticas extraídas:")
-        for key, value in stats.items():
-            print(f" - {key}: {value}")
+    if not df.empty:
+        df.to_csv("datos_grafos.csv", index=False)
+        print(f"\n{len(df)} grafos procesados correctamente. Archivo guardado como datos_grafos.csv")
+    else:
+        print(" No se procesó ningún grafo válido.")
