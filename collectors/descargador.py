@@ -1,4 +1,4 @@
-#collectors/downloader.py
+#collectors/descargador.py
 
 import os
 import io
