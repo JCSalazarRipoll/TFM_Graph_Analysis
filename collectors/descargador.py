@@ -31,7 +31,7 @@ def cargar_grafo_desde_url(url: str) -> nx.Graph | None:
                     A = scipy.io.mmread(path)
                     return nx.from_scipy_sparse_array(A)
                 elif f.endswith('.edges'):
-                    edges = leer_archivo_edges(path)
+                    edges = leer_archivo_aristas(path)
                     G = nx.Graph()
                     G.add_edges_from(edges)
                     return G
