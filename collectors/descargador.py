@@ -7,9 +7,9 @@ import zipfile
 import requests
 import scipy.io
 import networkx as nx
-from .utils import leer_archivo_edges
+from .utiles import leer_archivo_aristas
 
-def build_zip_url(from_page_url: str, download_php_url: str):
+def crear_zip_url(from_page_url: str, download_php_url: str):
     from urllib.parse import urlparse
     parsed_download = urlparse(download_php_url)
     base_name = os.path.splitext(os.path.basename(parsed_download.path))[0]
