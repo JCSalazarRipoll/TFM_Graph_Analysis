@@ -1,4 +1,4 @@
-# collectors/utils.py
+# collectors/utiles.py
 
 def leer_archivo_edges(path: str):
     edges = []
