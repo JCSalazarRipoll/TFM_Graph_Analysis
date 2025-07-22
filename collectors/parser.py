@@ -8,7 +8,7 @@ from .extractor_metricas import (
 from .metricas_grafos import mean_node_distance
 
 from .descargador import (
-    build_zip_url,
+    crear_zip_url,
     cargar_grafo_desde_url,
 )
 
