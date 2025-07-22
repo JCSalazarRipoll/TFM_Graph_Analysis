@@ -3,7 +3,6 @@
 from collectors.parser import url_dataframe
 import pandas as pd
 
-# Cabecera y lista de URLs
 HEAD_URL = "https://networkrepository.com/asn.php"
 URLS = [
     "https://networkrepository.com/insecta-ant-colony1-day01.php",
