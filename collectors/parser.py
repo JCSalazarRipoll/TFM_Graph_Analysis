@@ -53,7 +53,7 @@ def extraer_datos_de_url(url_php: str, head_url: str) -> dict | None:
             'coeficiente_aglomeracion_promedio': estadisticas['Average clustering coefficient'],
             'proporcion_triangulos_promedio': estadisticas['Fraction of closed triangles'],
             'centro_k_maximo': estadisticas['Maximum k-core'],
-            'cota_inferior_clique_maxima': estadisticas['Lower bound of Maximum Clique'],
+            'estimacion_minima_clique_maxima': estadisticas['Lower bound of Maximum Clique'],
             'distancia_promedio': distancia_promedio
         }
 
