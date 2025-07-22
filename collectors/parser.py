@@ -20,7 +20,7 @@ def extraer_datos_de_url(url_php: str, head_url: str) -> dict | None:
     Solo devuelve el diccionario si el grafo tiene las 14 métricas necesarias.
     """
 
-    url_zip, nombre_base = build_zip_url(head_url, url_php)
+    url_zip, nombre_base = crear_zip_url(head_url, url_php)
     print(f" Procesando: {nombre_base}")
 
     try:
@@ -39,22 +39,22 @@ def extraer_datos_de_url(url_php: str, head_url: str) -> dict | None:
         print(f" Grafo válido. Distancia promedio: {distancia_promedio:.4f}")
 
         datos_grafo = {
-            'name': nombre_base,
-            'nodes': estadisticas['Nodes'],
-            'edges': estadisticas['Edges'],
-            'density': estadisticas['Density'],
-            'maximum_degree': estadisticas['Maximum degree'],
-            'minimum_degree': estadisticas['Minimum degree'],
-            'average_degree': estadisticas['Average degree'],
-            'assortativity': estadisticas['Assortativity'],
-            'number_of_triangles': estadisticas['Number of triangles'],
-            'average_number_of_triangles': estadisticas['Average number of triangles'],
-            'maximum_number_of_triangles': estadisticas['Maximum number of triangles'],
-            'average_clustering_coefficient': estadisticas['Average clustering coefficient'],
-            'fraction_of_closed_triangles': estadisticas['Fraction of closed triangles'],
-            'maximum_k-core': estadisticas['Maximum k-core'],
-            'lower_bound_of_maximum_clique': estadisticas['Lower bound of Maximum Clique'],
-            'avg_node_dis': distancia_promedio
+            'nombre': nombre_base,
+            'nodos': estadisticas['Nodes'],
+            'aristas': estadisticas['Edges'],
+            'densidad': estadisticas['Density'],
+            'grado_maximo': estadisticas['Maximum degree'],
+            'grado_minimo': estadisticas['Minimum degree'],
+            'grado_promedio': estadisticas['Average degree'],
+            'asortatividad': estadisticas['Assortativity'],
+            'numero_triangulos': estadisticas['Number of triangles'],
+            'triangulos_promedio': estadisticas['Average number of triangles'],
+            'triangulos_maximo': estadisticas['Maximum number of triangles'],
+            'coeficiente_aglomeracion_promedio': estadisticas['Average clustering coefficient'],
+            'proporcion_triangulos_promedio': estadisticas['Fraction of closed triangles'],
+            'centro_k_maximo': estadisticas['Maximum k-core'],
+            'cota_inferior_clique_maxima': estadisticas['Lower bound of Maximum Clique'],
+            'distancia_promedio': distancia_promedio
         }
 
         return datos_grafo
