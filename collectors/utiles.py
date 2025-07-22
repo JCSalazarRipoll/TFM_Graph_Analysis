@@ -1,13 +1,13 @@
 # collectors/utiles.py
 
 def leer_archivo_aristas(path: str):
-    edges = []
+    aristas = []
     with open(path, 'r') as f:
-        for line in f:
-            parts = line.strip().split()
-            if len(parts) >= 2:
+        for linea in f:
+            partes = linea.strip().split()
+            if len(partes) >= 2:
                 try:
-                    edges.append((int(parts[0]), int(parts[1])))
+                    aristas.append((int(partes[0]), int(partes[1])))
                 except ValueError:
                     continue
-    return edges
+    return aristas
