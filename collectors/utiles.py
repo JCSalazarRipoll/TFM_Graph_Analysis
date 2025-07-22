@@ -1,6 +1,6 @@
 # collectors/utiles.py
 
-def leer_archivo_edges(path: str):
+def leer_archivo_aristas(path: str):
     edges = []
     with open(path, 'r') as f:
         for line in f:
