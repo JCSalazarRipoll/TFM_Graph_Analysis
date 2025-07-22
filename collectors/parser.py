@@ -5,7 +5,7 @@ from .extractor_metricas import (
     estadisticas_completas,
 )
 
-from .metricas_grafos import mean_node_distance
+from .metricas_grafos import distancia_promedio_nodos
 
 from .descargador import (
     crear_zip_url,
