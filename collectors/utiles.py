@@ -2,26 +2,36 @@
 
 import duckdb
 import pandas as pd
+from datetime import datetime
 
-def guardar_resultados_duckdb(df: pd.DataFrame, db_path: str = "grafos.duckdb", table_name: str = "grafos"):
+def guardar_resultados_en_duckdb(df_resultados: pd.DataFrame, db_path: str = "resultados.duckdb", tabla: str = "experimentos"):
     """
-    Guarda un DataFrame en una base de datos DuckDB, creando la tabla si no existe.
+    Guarda los resultados de un DataFrame en una base de datos DuckDB.
+
+    Si la tabla no existe, la crea. Si existe, inserta los nuevos registros.
+    Maneja errores y asegura el cierre de la conexión.
     """
+    con = None
     try:
         con = duckdb.connect(db_path)
 
-        # Crear tabla si no existe con el esquema del DataFrame
-        con.register("df", df)  # registra el DataFrame como una tabla temporal
-        con.execute(f"CREATE TABLE IF NOT EXISTS {table_name} AS SELECT * FROM df LIMIT 0")
-        con.execute(f"INSERT INTO {table_name} SELECT * FROM df")
-        print(f"✅ Resultados guardados exitosamente en {db_path}, tabla '{table_name}'.")
+        if "timestamp" not in df_resultados.columns:
+            df_resultados["timestamp"] = datetime.now()
+
+        con.execute(f"""
+            CREATE TABLE IF NOT EXISTS {tabla} AS 
+            SELECT * FROM df_resultados LIMIT 0
+        """)
+
+        con.register("df_temp", df_resultados)
+        con.execute(f"INSERT INTO {tabla} SELECT * FROM df_temp")
 
     except Exception as e:
-        print(f"⚠️ Error al guardar en DuckDB: {e}")
+        print(f"[ERROR] No se pudo guardar en DuckDB: {e}")
 
     finally:
-        con.close()
-
+        if con:
+            con.close()
 
 def leer_archivo_aristas(path: str):
     aristas = []
