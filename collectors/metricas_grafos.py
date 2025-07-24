@@ -17,8 +17,7 @@ def distancia_promedio_nodos(G: nx.Graph) -> float:
         return 0  
 
     if not nx.is_connected(G):
-        # Tomar el componente conexo más grande
-        G = G.subgraph(max(nx.connected_components(G), key=len)).copy()
+        raise ValueError("El grafo no es conexo. No se puede calcular la distancia promedio.")
 
     try:
         return nx.average_shortest_path_length(G)
