@@ -1,4 +1,4 @@
-#collectors/extractor_metricas.py
+#collectors/extractor_estadisticas.py
 
 import requests
 import re
