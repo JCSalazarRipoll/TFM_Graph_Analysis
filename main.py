@@ -4,8 +4,18 @@ from collectors.parser import url_dataframe
 from collectors import guardar_resultados_en_duckdb
 import pandas as pd
 import logging
+import os
 
-logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+os.makedirs("logs", exist_ok=True)
+
+logging.basicConfig(
+    level=logging.INFO, 
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[
+        logging.FileHandler("logs/ejecucion.log",mode='w'),
+        logging.StreamHandler()
+    ]
+)
 
 HEAD_URL = "https://networkrepository.com/asn.php"
 URLS = [
