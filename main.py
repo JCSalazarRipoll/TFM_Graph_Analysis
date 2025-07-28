@@ -14,17 +14,20 @@ URLS = [
 ]
 
 if __name__ == "__main__":
-    df = url_dataframe(URLS, HEAD_URL)
-
-    if not df.empty:
-        df.to_csv("datos_grafos.csv", index=False)
-        print(f"\n{len(df)} grafos procesados correctamente. Archivo guardado como datos_grafos.csv")
-
-        # Guardar en DuckDB
-        guardar_resultados_en_duckdb(df, db_path="resultados.duckdb", tabla="experimentos")
-        print("Resultados almacenados en la base de datos DuckDB: resultados.duckdb")
-    else:
-        print("No se procesó ningún grafo válido.")
+    try:
+        df = url_dataframe(URLS, HEAD_URL)
+    
+        if not df.empty:
+            df.to_csv("datos_grafos.csv", index=False)
+            print(f"\n{len(df)} grafos procesados correctamente. Archivo guardado como datos_grafos.csv")
+    
+            # Guardar en DuckDB
+            guardar_resultados_en_duckdb(df, db_path="resultados.duckdb", tabla="experimentos")
+            print("Resultados almacenados en la base de datos DuckDB: resultados.duckdb")
+        else:
+            print("No se procesó ningún grafo válido.")
+    except Exception as e:
+        print(f"Ocurrió un error durante la ejecución: {e}")
 
 
 
