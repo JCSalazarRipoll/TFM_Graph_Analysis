@@ -4,7 +4,6 @@ import requests
 import re
 from bs4 import BeautifulSoup
 
-
 def estadisticas_completas(estadisticas: dict) -> bool:
     """
     Verifica si las estadísticas del grafo tienen exactamente las 14 métricas esperadas.
