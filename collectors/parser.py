@@ -1,6 +1,6 @@
 #collectors/parser.py
 
-from .metricas_grafo import (
+from .extractor_estadisticas import (
     extraer_estadisticas_red,
     estadisticas_completas,
 )
