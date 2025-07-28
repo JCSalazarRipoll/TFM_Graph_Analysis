@@ -33,6 +33,7 @@ if __name__ == "__main__":
         df = url_dataframe(URLS, HEAD_URL)
 
         if not df.empty:
+            logging.info(f"Columnas en df: {df.columns.tolist()}")
             # Eliminar duplicados por nombre, nodos y aristas (opcional pero útil)
             df.drop_duplicates(subset=["nombre", "n_nodos", "n_aristas"], inplace=True)
 
