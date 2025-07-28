@@ -35,14 +35,14 @@ if __name__ == "__main__":
         if not df.empty:
             logging.info(f"Columnas en df: {df.columns.tolist()}")
             # Eliminar duplicados por nombre, nodos y aristas (opcional pero útil)
-            df.drop_duplicates(subset=["nombre", "n_nodos", "n_aristas"], inplace=True)
+            df.drop_duplicates(subset=["nombre", "nodos", "aristas"], inplace=True)
 
             # Guardar como CSV
             df.to_csv("datos_grafos.csv", index=False)
             logging.info(f"{len(df)} grafos procesados correctamente. Archivo guardado como datos_grafos.csv")
 
             # Mostrar resumen básico
-            logging.info("Resumen de grafos procesados:\n" + df[["nombre", "n_nodos", "n_aristas"]].to_string(index=False))
+            logging.info("Resumen de grafos procesados:\n" + df[["nombre", "nodos", "aristas"]].to_string(index=False))
 
             # Guardar en DuckDB
             guardar_resultados_en_duckdb(df, db_path="resultados.duckdb", tabla="experimentos")
