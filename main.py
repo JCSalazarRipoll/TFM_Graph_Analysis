@@ -60,7 +60,7 @@ if __name__ == "__main__":
     
     logging.info("Probando cargar_o_descargar_grafo...")
     try:
-        grafo, metadatos = cargar_o_descargar_grafo(nombre_archivo, url_prueba, carpeta="grafos")
+        grafo, metadatos = cargar_o_descargar_grafo(nombre_archivo, url_prueba)
         logging.info(f"Grafo cargado: {nombre_archivo}")
         logging.info(f"Número de nodos: {grafo.number_of_nodes()}, Número de aristas: {grafo.number_of_edges()}")
         logging.info(f"Metadatos: {metadatos}")
