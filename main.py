@@ -47,7 +47,21 @@ if __name__ == "__main__":
             # Guardar en DuckDB
             guardar_resultados_en_duckdb(df, db_path="resultados.duckdb", tabla="experimentos")
             logging.info("Resultados almacenados en la base de datos DuckDB: resultados.duckdb")
+            
         else:
             logging.info("No se procesó ningún grafo válido.")
     except Exception as e:
         logging.error("Ocurrió un error durante la ejecución", exc_info=True)
+
+    # Prueba directa de cargar_o_descargar_grafo
+    url_prueba = "https://networkrepository.com/data/g/ant/ant-01.edges"
+    nombre_archivo = "ant-01"
+    
+    logging.info("Probando cargar_o_descargar_grafo...")
+    try:
+        grafo, metadatos = cargar_o_descargar_grafo(nombre_archivo, url_prueba, carpeta="grafos")
+        logging.info(f"Grafo cargado: {nombre_archivo}")
+        logging.info(f"Número de nodos: {grafo.number_of_nodes()}, Número de aristas: {grafo.number_of_edges()}")
+        logging.info(f"Metadatos: {metadatos}")
+    except Exception as e:
+        logging.error("Error al cargar el grafo de prueba", exc_info=True)
