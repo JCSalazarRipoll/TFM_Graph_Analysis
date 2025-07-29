@@ -79,6 +79,8 @@ def cargar_o_descargar_grafo(nombre: str, url: str, carpeta_destino: str = "graf
         "tamano_archivo_bytes": os.path.getsize(ruta_grafo)
     }
 
+    print(metadatos)
+
     return G, metadatos
 
 def crear_zip_url(from_page_url: str, download_php_url: str):
