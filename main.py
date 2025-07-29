@@ -2,6 +2,7 @@
 
 from collectors.parser import url_dataframe
 from collectors import guardar_resultados_en_duckdb
+from collectors.descarga import cargar_o_descargar_grafo
 import pandas as pd
 import logging
 import os
