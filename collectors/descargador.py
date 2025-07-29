@@ -61,16 +61,25 @@ def cargar_o_descargar_grafo(nombre: str, url: str, carpeta_destino: str = "graf
 
     if os.path.exists(ruta_grafo):
         print(f"[INFO] Cargando grafo local: {ruta_grafo}")
-        return nx.read_gpickle(ruta_grafo)
+        G = nx.read_gpickle(ruta_grafo)
+    else:
+        print(f"[INFO] Descargando grafo desde: {url}")
+        G = cargar_grafo_desde_url(url)
+        if G is None:
+            raise RuntimeError(f"No se pudo descargar o procesar el grafo desde: {url}")
+        nx.write_gpickle(G, ruta_grafo)
+        print(f"[INFO] Grafo guardado localmente en: {ruta_grafo}")
 
-    print(f"[INFO] Descargando grafo desde: {url}")
-    G = cargar_grafo_desde_url(url)
-    if G is None:
-        raise RuntimeError(f"No se pudo descargar o procesar el grafo desde: {url}")
+    metadatos = {
+        "nombre": nombre,
+        "nodos": G.number_of_nodes(),
+        "aristas": G.number_of_edges(),
+        "dirigido": G.is_directed(),
+        "archivo": ruta_grafo,
+        "tamano_archivo_bytes": os.path.getsize(ruta_grafo)
+    }
 
-    nx.write_gpickle(G, ruta_grafo)
-    print(f"[INFO] Grafo guardado localmente en: {ruta_grafo}")
-    return G
+    return G, metadatos
 
 def crear_zip_url(from_page_url: str, download_php_url: str):
     """
