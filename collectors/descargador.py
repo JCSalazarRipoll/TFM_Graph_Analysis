@@ -44,46 +44,6 @@ def cargar_grafo_desde_url(url: str) -> nx.Graph | None:
                     return G
     return None
 
-def cargar_o_descargar_grafo(nombre_archivo: str, url: str, carpeta_destino: str = "grafos_guardados") -> nx.Graph:
-    """
-    Carga un grafo desde disco si ya está guardado. Si no, lo descarga desde la URL,
-    lo guarda en disco y lo retorna.
-
-    Args:
-        nombre_archivo (str): Nombre del archivo para guardar el grafo.
-        url (str): URL de donde descargar el grafo si no existe.
-        carpeta_destino (str): Carpeta donde guardar/cargar los grafos.
-
-    Returns:
-        nx.Graph: El grafo cargado.
-    """
-    os.makedirs(carpeta_destino, exist_ok=True)
-    ruta_grafo = os.path.join(carpeta_destino, f"{nombre_archivo}.gpickle")
-
-    if os.path.exists(ruta_grafo):
-        print(f"[INFO] Cargando grafo local: {ruta_grafo}")
-        G = nx.read_gpickle(ruta_grafo)
-    else:
-        print(f"[INFO] Descargando grafo desde: {url}")
-        G = cargar_grafo_desde_url(url)
-        if G is None:
-            raise RuntimeError(f"No se pudo descargar o procesar el grafo desde: {url}")
-        nx.write_gpickle(G, ruta_grafo)
-        print(f"[INFO] Grafo guardado localmente en: {ruta_grafo}")
-
-    metadatos = {
-        "nombre": nombre,
-        "nodos": G.number_of_nodes(),
-        "aristas": G.number_of_edges(),
-        "dirigido": G.is_directed(),
-        "archivo": ruta_grafo,
-        "tamano_archivo_bytes": os.path.getsize(ruta_grafo)
-    }
-
-    print(metadatos)
-
-    return G, metadatos
-
 def crear_zip_url(from_page_url: str, download_php_url: str):
     """
     Genera la URL directa a un archivo .zip a partir de la página de origen
