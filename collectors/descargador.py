@@ -44,13 +44,13 @@ def cargar_grafo_desde_url(url: str) -> nx.Graph | None:
                     return G
     return None
 
-def cargar_o_descargar_grafo(nombre: str, url: str, carpeta_destino: str = "grafos_guardados") -> nx.Graph:
+def cargar_o_descargar_grafo(nombre_archivo: str, url: str, carpeta_destino: str = "grafos_guardados") -> nx.Graph:
     """
     Carga un grafo desde disco si ya está guardado. Si no, lo descarga desde la URL,
     lo guarda en disco y lo retorna.
 
     Args:
-        nombre (str): Nombre del archivo para guardar el grafo.
+        nombre_archivo (str): Nombre del archivo para guardar el grafo.
         url (str): URL de donde descargar el grafo si no existe.
         carpeta_destino (str): Carpeta donde guardar/cargar los grafos.
 
@@ -58,7 +58,7 @@ def cargar_o_descargar_grafo(nombre: str, url: str, carpeta_destino: str = "graf
         nx.Graph: El grafo cargado.
     """
     os.makedirs(carpeta_destino, exist_ok=True)
-    ruta_grafo = os.path.join(carpeta_destino, f"{nombre}.gpickle")
+    ruta_grafo = os.path.join(carpeta_destino, f"{nombre_archivo}.gpickle")
 
     if os.path.exists(ruta_grafo):
         print(f"[INFO] Cargando grafo local: {ruta_grafo}")
