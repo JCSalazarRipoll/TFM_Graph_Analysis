@@ -27,38 +27,21 @@ def cargar_grafo_desde_url(url: str) -> nx.Graph | None:
     headers = {'User-Agent': 'Mozilla/5.0'}
     response = requests.get(url, headers=headers)
     response.raise_for_status()
-    
-    if url.endswith('.zip'):
-        #Si es un archivo comprimido
-        with tempfile.TemporaryDirectory() as tmpdir:
-            with zipfile.ZipFile(io.BytesIO(response.content)) as z:
-                z.extractall(tmpdir)
-            for root, _, files in os.walk(tmpdir):
-                for f in files:
-                    path = os.path.join(root, f)
-                    if f.endswith('.mtx'):
-                        A = scipy.io.mmread(path)
-                        return nx.from_scipy_sparse_array(A)
-                    elif f.endswith('.edges'):
-                        edges = leer_archivo_aristas(path)
-                        G = nx.Graph()
-                        G.add_edges_from(edges)
-                        return G
-    else:
-        # Si es un archivo plano (.edges o .mtx)
-        with tempfile.NamedTemporaryFile(delete=False) as tmpfile:
-            tmpfile.write(response.content)
-            tmpfile_path = tmpfile.name
 
-        if url.endswith('.mtx'):
-            A = scipy.io.mmread(tmpfile_path)
-            return nx.from_scipy_sparse_array(A)
-        elif url.endswith('.edges'):
-            edges = leer_archivo_aristas(tmpfile_path)
-            G = nx.Graph()
-            G.add_edges_from(edges)
-            return G
-
+    with tempfile.TemporaryDirectory() as tmpdir:
+        with zipfile.ZipFile(io.BytesIO(response.content)) as z:
+            z.extractall(tmpdir)
+        for root, _, files in os.walk(tmpdir):
+            for f in files:
+                path = os.path.join(root, f)
+                if f.endswith('.mtx'):
+                    A = scipy.io.mmread(path)
+                    return nx.from_scipy_sparse_array(A)
+                elif f.endswith('.edges'):
+                    edges = leer_archivo_aristas(path)
+                    G = nx.Graph()
+                    G.add_edges_from(edges)
+                    return G
     return None
 
 def cargar_o_descargar_grafo(nombre: str, url: str, carpeta_destino: str = "grafos_guardados") -> nx.Graph:
