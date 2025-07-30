@@ -1,11 +1,15 @@
 # main.py
 
-from collectors.parser import url_dataframe
-from collectors import guardar_resultados_en_duckdb
-from collectors.descargador import cargar_o_descargar_grafo
+#Librerías necesarias para ejecutar el código desde main
 import pandas as pd
 import logging
 import os
+
+#Cargar funciones desde los diferentes directorios creados
+from collectors.parser import url_dataframe
+from collectors import guardar_resultados_en_duckdb
+from collectors.descargador import cargar_o_descargar_grafo
+
 
 os.makedirs("logs", exist_ok=True)
 
