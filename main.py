@@ -55,8 +55,8 @@ if __name__ == "__main__":
         logging.error("Ocurrió un error durante la ejecución", exc_info=True)
 
     # Prueba directa de cargar_o_descargar_grafo
-    url_prueba = "https://networkrepository.com/data/g/ant/ant-01.edges"
-    nombre_archivo = "ant-01"
+    url_prueba = "https://networkrepository.com/insecta-ant-colony1-day05.php"
+    nombre_archivo = "ant-05"
     
     logging.info("Probando cargar_o_descargar_grafo...")
     try:
