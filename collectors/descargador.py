@@ -89,7 +89,8 @@ def leer_config_desde_txt(path_txt: str):
                 leyendo_urls = False
             
             elif leyendo_urls:
-                urls_php.append(linea)
+                url_limpia = linea.strip().strip(',').strip('"').strip("'")
+                urls_php.append(url_limpia)
 
     if not head_url:
         raise ValueError("No se encontró la línea con 'head_url:' en el archivo.")
