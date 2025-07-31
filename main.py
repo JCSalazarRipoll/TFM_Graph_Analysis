@@ -34,19 +34,14 @@ URLS = [
     "https://networkrepository.com/insecta-ant-colony1-day04.php",
     "https://networkrepository.com/insecta-ant-colony1-day05.php"
 ]
-print("this is the head url from past and new versions")
-print(HEAD_URL)
-print(head_url)
-print("this is the list of urls from past a new versions")
-print(URLS)
-print(urls)
 
 if __name__ == "__main__":
     try:
         logging.info("Inicio del proceso de recopilación y análisis de grafos.")
 
         #Esta función devuelve un dataframe con los datos obtenidos de los grafos
-        df = url_dataframe(URLS, HEAD_URL)
+        #df = url_dataframe(URLS, HEAD_URL)
+        df = url_dataframe(urls,head_url)
 
         #En caso de que se hayan podido procesar los grafos correctamente
         if not df.empty:
