@@ -1,5 +1,5 @@
-head_url: 'https://networkrepository.com/asn.php'
-urls_php: [
+head_url = 'https://networkrepository.com/asn.php'
+urls_php = [
     "https://networkrepository.com/insecta-ant-colony1-day01.php",
     "https://networkrepository.com/insecta-ant-colony1-day02.php",
     "https://networkrepository.com/insecta-ant-colony1-day03.php",
