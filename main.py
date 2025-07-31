@@ -40,7 +40,7 @@ if __name__ == "__main__":
         logging.info("Inicio del proceso de recopilación y análisis de grafos.")
 
         #Esta función devuelve un dataframe con los datos obtenidos de los grafos
-        df = url_dataframe(URLS, HEAD_URL)
+        df = url_dataframe(urls, head_url)
 
         #En caso de que se hayan podido procesar los grafos correctamente
         if not df.empty:
