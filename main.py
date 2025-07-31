@@ -22,18 +22,7 @@ logging.basicConfig(
     ]
 )
 
-head_url, urls = leer_config_desde_txt("collectors/urls_grafos.txt")
-
-#Esta es la direccion para descargar los datos de network repository
-HEAD_URL = "https://networkrepository.com/asn.php"
-#Estos son los distintos grafos que se van a usar
-URLS = [
-    "https://networkrepository.com/insecta-ant-colony1-day01.php",
-    "https://networkrepository.com/insecta-ant-colony1-day02.php",
-    "https://networkrepository.com/insecta-ant-colony1-day03.php",
-    "https://networkrepository.com/insecta-ant-colony1-day04.php",
-    "https://networkrepository.com/insecta-ant-colony1-day05.php"
-]
+head_url, urls = leer_config_desde_txt("collectors/ant_colony.txt")
 
 if __name__ == "__main__":
     try:
