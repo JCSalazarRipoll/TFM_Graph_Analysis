@@ -67,3 +67,34 @@ def crear_zip_url(from_page_url: str, download_php_url: str):
     directory = from_page_url.split('/')[-1].replace('.php', '')
     zip_url = f"https://nrvis.com/download/data/{directory}/{base_name}.zip"
     return zip_url, base_name
+
+def leer_config_desde_txt(path_txt: str):
+    head_url = None
+    urls_php = []
+    leyendo_urls = False
+
+    with open(path_txt, "r", encoding="utf-8") as f:
+        for linea in f:
+            linea = linea.strip()
+
+            # Leer head_url
+            if linea.startswith("head_url:"):
+                head_url = linea.split("head_url:")[1].strip()
+            
+            # Inicia la lista
+            elif linea.startswith("urls_php:"):
+                leyendo_urls = False  # aún no hemos llegado a "["
+            
+            elif linea == "[":
+                leyendo_urls = True
+            
+            elif linea == "]":
+                leyendo_urls = False
+            
+            elif leyendo_urls:
+                urls_php.append(linea)
+
+    if not head_url:
+        raise ValueError("No se encontró la línea con 'head_url:' en el archivo.")
+
+    return head_url, urls_php
