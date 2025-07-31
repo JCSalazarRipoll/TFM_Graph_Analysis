@@ -6,8 +6,8 @@ import logging
 import os
 
 #Cargar funciones desde los diferentes directorios creados
-from collectors.parser import url_dataframe, leer_config_desde_txt
-from collectors import guardar_resultados_en_duckdb
+from collectors.parser import url_dataframe
+from collectors import guardar_resultados_en_duckdb, leer_config_desde_txt
 
 #Se crea una carpeta para almacenar los logs generados
 os.makedirs("logs", exist_ok=True)
