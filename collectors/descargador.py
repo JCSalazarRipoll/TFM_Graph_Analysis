@@ -78,15 +78,12 @@ def leer_config_desde_txt(path_txt: str):
             linea = linea.strip()
 
             # Leer head_url
-            if linea.startswith("head_url:"):
-                head_url = linea.split("head_url:")[1].strip()
+            if linea.startswith("head_url ="):
+                head_url = linea.split("=")[1].strip().strip("'")
             
             # Inicia la lista
-            elif linea.startswith("urls_php:"):
-                leyendo_urls = False  # aún no hemos llegado a "["
-            
-            elif linea == "[":
-                leyendo_urls = True
+            elif linea.startswith("urls_php = ["):
+                leyendo_urls = True  # aún no hemos llegado a "["
             
             elif linea == "]":
                 leyendo_urls = False
