@@ -6,7 +6,7 @@ import logging
 import os
 
 #Cargar funciones desde los diferentes directorios creados
-from collectors.parser import url_dataframe
+from collectors.parser import url_dataframe, leer_config_desde_txt
 from collectors import guardar_resultados_en_duckdb
 
 #Se crea una carpeta para almacenar los logs generados
@@ -21,6 +21,8 @@ logging.basicConfig(
         logging.StreamHandler()
     ]
 )
+
+head_url, urls = leer_config_desde_txt("collectors/urls_grafos.txt")
 
 #Esta es la direccion para descargar los datos de network repository
 HEAD_URL = "https://networkrepository.com/asn.php"
