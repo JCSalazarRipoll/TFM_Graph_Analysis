@@ -7,7 +7,6 @@ urls_php = [
     'https://networkrepository.com/tech-as-topology.php',
     'https://networkrepository.com/insecta-ant-colony2.php',
     'https://networkrepository.com/insecta-ant-colony1.php',
-    'https://networkrepository.com/soc-wiki-elec.php',
     'https://networkrepository.com/ia-movielens-user2tags-10m.php',
     'https://networkrepository.com/ia-radoslaw-email.php'
 ]
