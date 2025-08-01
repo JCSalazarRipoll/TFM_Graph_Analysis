@@ -2,10 +2,6 @@ head_url = 'https://networkrepository.com/soc.php'
 urls_php = [
     'https://networkrepository.com/soc-brightkite.php',
     'https://networkrepository.com/soc-epinions.php',
-    'https://networkrepository.com/soc-wiki-elec.php',
-    'https://networkrepository.com/soc-gemsec-RO.php',
-    'https://networkrepository.com/fb-pages-media.php',
-    'https://networkrepository.com/soc-gemsec-HU.php',
     'https://networkrepository.com/soc-douban.php',
     'https://networkrepository.com/soc-slashdot.php',
     'https://networkrepository.com/soc-gemsec-HR.php',
