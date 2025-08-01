@@ -40,9 +40,13 @@ if __name__ == "__main__":
     try:
         logging.info("Inicio del proceso de recopilación y análisis de grafos.")
 
+        df = pd.DataFrame()
         #Esta función devuelve un dataframe con los datos obtenidos de los grafos
-        #df = url_dataframe(URLS, HEAD_URL)
-        df = url_dataframe(urls,head_url)
+
+        for archivo in archivos_txt:
+            head_url, urls = leer_config_desde_txt(archivo)
+            df_temp = url_dataframe(urls,head_url)
+            df = pd.concat([df, df_temp], ignore_index=True)
 
         #En caso de que se hayan podido procesar los grafos correctamente
         if not df.empty:
