@@ -3,15 +3,11 @@ urls_php = [
     "https://networkrepository.com/ia-email-EU.php",
     "https://networkrepository.com/ia-email-univ.php",
     'https://networkrepository.com/ia-escorts-dynamic.php',
-    'https://networkrepository.com/ia-dnc-corecipient.php',
     'https://networkrepository.com/ia-fb-messages.php',
     'https://networkrepository.com/ia-infect-hyper.php',
     'https://networkrepository.com/ia-infect-dublin.php',
     'https://networkrepository.com/ia-enron-large.php',
     'https://networkrepository.com/ia-frwikinews-user-edits.php',
-    'https://networkrepository.com/ia-primary-school-proximity.php',
-    'https://networkrepository.com/ia-workplace-contacts.php',
     'https://networkrepository.com/ia-radoslaw-email.php',
-    'https://networkrepository.com/ia-workplace-contacts.php',
     'https://networkrepository.com/ia-reality.php'
 ]
