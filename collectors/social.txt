@@ -9,5 +9,14 @@ urls_php = [
     'https://networkrepository.com/soc-douban.php',
     'https://networkrepository.com/soc-slashdot.php',
     'https://networkrepository.com/soc-gemsec-HR.php',
-    'https://networkrepository.com/soc-twitter-follows.php'
+    'https://networkrepository.com/soc-twitter-follows.php',
+    'https://networkrepository.com/fb-pages-sport.php',
+    'https://networkrepository.com/soc-anybeat.php',
+    'https://networkrepository.com/fb-pages-government.php',
+    'https://networkrepository.com/fb-pages-company.php',
+    'https://networkrepository.com/soc-advogato.php',
+    'https://networkrepository.com/fb-pages-politician.php',
+    'https://networkrepository.com/fb-pages-tvshow.php',
+    'https://networkrepository.com/soc-wiki-Vote.php',
+    'https://networkrepository.com/fb-pages-food.php'
 ]
