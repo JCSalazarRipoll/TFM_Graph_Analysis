@@ -1,7 +1,6 @@
 head_url = 'https://networkrepository.com/dimacs10.php'
 urls_php = [
     'https://networkrepository.com/wing-nodal.php',
-    'https://networkrepository.com/delaunay-n15.php',
     'https://networkrepository.com/fe-sphere.php',
     'https://networkrepository.com/delaunay-n14.php',
     'https://networkrepository.com/fe-4elt2.php',
