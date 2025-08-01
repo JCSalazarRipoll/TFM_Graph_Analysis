@@ -7,12 +7,6 @@ import os
 
 from pathlib import Path
 
-# Eliminar bio.txt si está fuera de collectors
-archivo_fuera = Path("bio.txt")
-if archivo_fuera.exists():
-    archivo_fuera.unlink()
-    print("🗑️  bio.txt eliminado correctamente")
-
 #Cargar funciones desde los diferentes directorios creados
 from collectors.parser import url_dataframe
 from collectors import guardar_resultados_en_duckdb, leer_config_desde_txt
@@ -31,6 +25,16 @@ logging.basicConfig(
 )
 
 head_url, urls = leer_config_desde_txt("collectors/ant_colony.txt")
+
+import os
+from pathlib import Path
+
+
+carpeta = Path("collectors")
+archivos_txt = sorted(carpeta.glob("*.txt"))  # Todos los .txt ordenados alfabéticamente
+
+for archivo in archivos_txt:
+    print(archivo)
 
 if __name__ == "__main__":
     try:
