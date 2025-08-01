@@ -1,7 +1,5 @@
 head_url = 'https://networkrepository.com/inf.php'
 urls_php = [
-    'https://networkrepository.com/inf-euroroad.php',
     'https://networkrepository.com/inf-USAir97.php',
-    'https://networkrepository.com/inf-power.php',
-    'https://networkrepository.com/inf-openflights.php'
+    'https://networkrepository.com/inf-power.php'
 ]
