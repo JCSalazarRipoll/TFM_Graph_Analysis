@@ -8,6 +8,5 @@ urls_php = [
     'https://networkrepository.com/delaunay-n12.php',
     'https://networkrepository.com/delaunay-n11.php',
     'https://networkrepository.com/bio-celegansneural.php',
-    'https://networkrepository.com/delaunay-n10.php',
-    'https://networkrepository.com/polblogs.php'
+    'https://networkrepository.com/delaunay-n10.php'
 ]
