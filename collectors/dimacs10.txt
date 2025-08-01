@@ -1,0 +1,14 @@
+head_url = 'https://networkrepository.com/dimacs10.php'
+urls_php = [
+    'https://networkrepository.com/wing-nodal.php',
+    'https://networkrepository.com/delaunay-n15.php',
+    'https://networkrepository.com/fe-sphere.php',
+    'https://networkrepository.com/delaunay-n14.php',
+    'https://networkrepository.com/fe-4elt2.php',
+    'https://networkrepository.com/delaunay-n13.php',
+    'https://networkrepository.com/delaunay-n12.php',
+    'https://networkrepository.com/delaunay-n11.php',
+    'https://networkrepository.com/bio-celegansneural.php',
+    'https://networkrepository.com/delaunay-n10.php',
+    'https://networkrepository.com/polblogs.php'
+]
