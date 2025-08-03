@@ -29,4 +29,4 @@ def distancia_promedio_nodos(G: nx.Graph) -> float:
         return distancia, duracion
     except Exception as e:
         logger.warning(f"Error al calcular la distancia promedio: {e}")
-        return -1
+        return -1,-1
