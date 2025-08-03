@@ -35,8 +35,8 @@ def extraer_datos_de_url(url_php: str, head_url: str) -> dict | None:
             print(f" Grafo {nombre_base} ignorado: métricas incompletas")
             return None
 
-        distancia_promedio = distancia_promedio_nodos(G)
-        print(f" Grafo válido. Distancia promedio: {distancia_promedio:.4f}")
+        distancia_promedio, duracion = distancia_promedio_nodos(G)
+        print(f" Grafo válido. Distancia promedio: {distancia_promedio:.4f} Duración: {duracion:.4f}")
 
         datos_grafo = {
             'nombre': nombre_base,
@@ -54,7 +54,8 @@ def extraer_datos_de_url(url_php: str, head_url: str) -> dict | None:
             'proporcion_triangulos_promedio': estadisticas['Fraction of closed triangles'],
             'centro_k_maximo': estadisticas['Maximum k-core'],
             'estimacion_minima_clique_maxima': estadisticas['Lower bound of Maximum Clique'],
-            'distancia_promedio': distancia_promedio
+            'distancia_promedio': distancia_promedio,
+            'duracion_calculo': duracion
         }
 
         return datos_grafo
