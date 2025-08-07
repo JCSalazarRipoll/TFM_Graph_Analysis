@@ -5,6 +5,7 @@ import pandas as pd
 import logging
 import os
 from pathlib import Path
+import requests
 
 #Cargar funciones desde los diferentes directorios creados
 from collectors.parser import url_dataframe
