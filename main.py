@@ -43,8 +43,6 @@ if __name__ == "__main__":
 
         #En caso de que se hayan podido procesar los grafos correctamente
         if not df.empty:
-            #imprime la informacion de las columnas dentro del dataframe
-            logging.info(f"Columnas en df: {df.columns.tolist()}")
             # Elimina duplicados por nombre, nodos y aristas
             df.drop_duplicates(subset=["nombre", "nodos", "aristas"], inplace=True)
 
