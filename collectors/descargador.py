@@ -44,7 +44,7 @@ def cargar_grafo_desde_url(url: str) -> nx.Graph | None:
                     return G
     return None
 
-def crear_zip_url(from_page_url: str, download_php_url: str):
+def crear_zip_url_old(from_page_url: str, download_php_url: str):
     """
     Genera la URL directa a un archivo .zip a partir de la página de origen
     y la URL de descarga proporcionada por Network Repository (NR).
@@ -67,6 +67,46 @@ def crear_zip_url(from_page_url: str, download_php_url: str):
     directory = from_page_url.split('/')[-1].replace('.php', '')
     zip_url = f"https://nrvis.com/download/data/{directory}/{base_name}.zip"
     return zip_url, base_name
+
+def crear_zip_url(from_page_url: str, download_php_url: str):
+    """
+    Genera la URL directa a un archivo .zip desde Network Repository, 
+    con fallback si el nombre contiene guiones incompatibles.
+    """
+    parsed_download = urlparse(download_php_url)
+    base_name = os.path.splitext(os.path.basename(parsed_download.path))[0]
+    directory = from_page_url.split('/')[-1].replace('.php', '')
+
+    # Primera opción: base_name tal cual
+    zip_url_1 = f"https://nrvis.com/download/data/{directory}/{base_name}.zip"
+    
+    # Segunda opción: reemplazar último '-' por '_'
+    if '-' in base_name:
+        parts = base_name.rsplit('-', 1)
+        alt_base_name = '_'.join(parts)
+    else:
+        alt_base_name = base_name  # No cambio si no hay '-'
+
+    zip_url_2 = f"https://nrvis.com/download/data/{directory}/{alt_base_name}.zip"
+
+    # Intentar con la primera
+    try:
+        response = requests.head(zip_url_1, timeout=5)
+        if response.status_code == 200:
+            return zip_url_1, base_name
+    except Exception:
+        pass
+
+    # Intentar con la segunda
+    try:
+        response = requests.head(zip_url_2, timeout=5)
+        if response.status_code == 200:
+            return zip_url_2, alt_base_name
+    except Exception:
+        pass
+
+    # Si ninguna funciona, se devuelve la primera como fallback
+    return zip_url_1, base_name
 
 def leer_config_desde_txt(path_txt: str):
     head_url = None
