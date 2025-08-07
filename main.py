@@ -39,7 +39,21 @@ else:
     processed_urls = set()
 
 # Filtrar las urls que aún no han sido procesadas
-remaining_collectors = [c for c in archivos_txt if c not in processed_urls]
+remaining_collectors = []
+
+for path_txt in archivos_txt:
+    try:
+        with open(path_txt, "r", encoding="utf-8") as f:
+            head_url = None
+            for linea in f:
+                linea = linea.strip()
+                if linea.startswith("head_url ="):
+                    head_url = linea.split("=")[1].strip().strip("'")
+                    break  # no necesitamos leer más
+            if head_url and head_url not in processed_urls:
+                remaining_collectors.append(path_txt)
+    except Exception as e:
+        print(f"Error leyendo {path_txt}: {e}")
 
 # Tomar solo los primeros 3
 to_process = remaining_collectors[:3]
