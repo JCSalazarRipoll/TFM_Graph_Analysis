@@ -3,7 +3,6 @@ urls_php = [
     "https://networkrepository.com/insecta-ant-colony5.php",
     "https://networkrepository.com/insecta-ant-colony3.php",
     'https://networkrepository.com/ia-frwikinews-user-edits.php',
-    'https://networkrepository.com/tech-as-topology.php',
     'https://networkrepository.com/insecta-ant-colony2.php',
     'https://networkrepository.com/insecta-ant-colony1.php',
     'https://networkrepository.com/ia-movielens-user2tags-10m.php',
