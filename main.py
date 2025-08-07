@@ -26,17 +26,27 @@ logging.basicConfig(
 carpeta = Path("collectors")
 archivos_txt = sorted(carpeta.glob("*.txt"))  # Todos los .txt ordenados alfabéticamente
 
-for archivo in archivos_txt:
-    print(archivo)
+# Cargar grafos ya procesados (si existe)
+if os.path.exists(CSV_PATH):
+    df = pd.read_csv(CSV_PATH)
+    processed_urls = set(df_existing["url"])
+else:
+    df = pd.DataFrame()
+    processed_urls = set()
+
+# Filtrar las urls que aún no han sido procesadas
+remaining_collectors = [c for c in archivos_txt if c not in processed_urls]
+
+# Tomar solo los primeros 4
+to_process = remaining_collectors[:4]
 
 if __name__ == "__main__":
     try:
         logging.info("Inicio del proceso de recopilación y análisis de grafos.")
-
-        df = pd.DataFrame()
+        
         #Esta función devuelve un dataframe con los datos obtenidos de los grafos
 
-        for archivo in archivos_txt:
+        for archivo in to_process:
             head_url, urls = leer_config_desde_txt(archivo)
             df_temp = url_dataframe(urls,head_url)
             df = pd.concat([df, df_temp], ignore_index=True)
