@@ -26,6 +26,9 @@ logging.basicConfig(
 carpeta = Path("collectors")
 archivos_txt = sorted(carpeta.glob("*.txt"))  # Todos los .txt ordenados alfabéticamente
 
+# Ruta del archivo donde se guardan los datos procesados
+CSV_PATH = "datos_grafos.csv"
+
 # Cargar grafos ya procesados (si existe)
 if os.path.exists(CSV_PATH):
     df = pd.read_csv(CSV_PATH)
