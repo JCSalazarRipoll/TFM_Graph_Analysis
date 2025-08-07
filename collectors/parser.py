@@ -40,6 +40,7 @@ def extraer_datos_de_url(url_php: str, head_url: str) -> dict | None:
 
         datos_grafo = {
             'nombre': nombre_base,
+            'coleccion': head_url,
             'nodos': estadisticas['Nodes'],
             'aristas': estadisticas['Edges'],
             'densidad': estadisticas['Density'],
