@@ -1,0 +1,10 @@
+head_url = "https://networkrepository.com/eco.php"
+
+urls_php = [
+    "https://networkrepository.com/eco-everglades.php",
+    "https://networkrepository.com/eco-florida.php",
+    "https://networkrepository.com/eco-foodweb-baydry.php",
+    "https://networkrepository.com/eco-foodweb-baywet.php",
+    "https://networkrepository.com/eco-mangwet.php",
+    "https://networkrepository.com/eco-stmarks.php"
+]
