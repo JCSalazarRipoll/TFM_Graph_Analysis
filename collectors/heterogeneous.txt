@@ -1,0 +1,10 @@
+head_url = "https://networkrepository.com/heter.php"
+
+urls_php = [
+    "https://networkrepository.com/epinions.php",
+    "https://networkrepository.com/actor.php",
+    "https://networkrepository.com/dbpedia.php",
+    "https://networkrepository.com/movielens-10m-noRatings.php",
+    "https://networkrepository.com/digg.php",
+    "https://networkrepository.com/movielens-10m.php"
+]
