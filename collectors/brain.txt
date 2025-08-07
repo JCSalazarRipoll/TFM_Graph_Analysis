@@ -2,12 +2,10 @@ head_url = 'https://networkrepository.com/bn.php'
 
 urls_php = [
     "https://networkrepository.com/bn-mouse-retina-1.php",
-    "https://networkrepository.com/bn-fly-drosophila-medulla-1.php",
     "https://networkrepository.com/bn-mouse-brain-1.php",
     "https://networkrepository.com/bn-macaque-rhesus-brain-1.php",
     "https://networkrepository.com/bn-macaque-rhesus-interareal-cortical-network-2.php",
     "https://networkrepository.com/bn-macaque-rhesus-cerebral-cortex-1.php",
-    "https://networkrepository.com/bn-mouse-kasthuri-graph-v4.php",
     "https://networkrepository.com/bn-cat-mixed-species-brain-1.php",
     "https://networkrepository.com/bn-macaque-rhesus-brain-2.php",
     "https://networkrepository.com/bn-mouse-visual-cortex-2.php",
