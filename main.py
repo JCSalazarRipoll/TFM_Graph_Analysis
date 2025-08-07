@@ -37,8 +37,8 @@ else:
 # Filtrar las urls que aún no han sido procesadas
 remaining_collectors = [c for c in archivos_txt if c not in processed_urls]
 
-# Tomar solo los primeros 4
-to_process = remaining_collectors[:4]
+# Tomar solo los primeros 3
+to_process = remaining_collectors[:3]
 
 if __name__ == "__main__":
     try:
