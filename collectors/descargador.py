@@ -92,7 +92,7 @@ def crear_zip_url(from_page_url: str, download_php_url: str):
     # Intentar con la primera
     try:
         response = requests.head(zip_url_1, timeout=5)
-        if response.status_code == 200:
+        if response.status_code == 301:
             return zip_url_1, base_name
     except Exception:
         pass
@@ -100,7 +100,7 @@ def crear_zip_url(from_page_url: str, download_php_url: str):
     # Intentar con la segunda
     try:
         response = requests.head(zip_url_2, timeout=5)
-        if response.status_code == 200:
+        if response.status_code == 301:
             return zip_url_2, alt_base_name
     except Exception:
         pass
