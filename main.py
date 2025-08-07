@@ -33,7 +33,7 @@ CSV_PATH = "datos_grafos.csv"
 # Cargar grafos ya procesados (si existe)
 if os.path.exists(CSV_PATH):
     df = pd.read_csv(CSV_PATH)
-    processed_urls = set(df_existing["url"])
+    processed_urls = set(df["url"])
 else:
     df = pd.DataFrame()
     processed_urls = set()
