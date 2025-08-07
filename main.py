@@ -4,7 +4,6 @@
 import pandas as pd
 import logging
 import os
-
 from pathlib import Path
 
 #Cargar funciones desde los diferentes directorios creados
@@ -23,12 +22,6 @@ logging.basicConfig(
         logging.StreamHandler()
     ]
 )
-
-head_url, urls = leer_config_desde_txt("collectors/ant_colony.txt")
-
-import os
-from pathlib import Path
-
 
 carpeta = Path("collectors")
 archivos_txt = sorted(carpeta.glob("*.txt"))  # Todos los .txt ordenados alfabéticamente
