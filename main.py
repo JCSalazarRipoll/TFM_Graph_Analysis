@@ -24,15 +24,6 @@ logging.basicConfig(
     ]
 )
 
-file1 = "https://nrvis.com/download/data/bn/bn-mouse-retina-1.zip"
-file2 = "https://nrvis.com/download/data/bn/bn-mouse-retina_1.zip"
-
-response = requests.head(file1)
-print(response.status_code)
-
-response = requests.head(file2)
-print(response.status_code)
-
 carpeta = Path("collectors")
 archivos_txt = sorted(carpeta.glob("*.txt"))  # Todos los .txt ordenados alfabéticamente
 
