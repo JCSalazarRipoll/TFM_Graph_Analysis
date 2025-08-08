@@ -55,8 +55,8 @@ for path_txt in archivos_txt:
     except Exception as e:
         print(f"Error leyendo {path_txt}: {e}")
 
-# Tomar solo los primeros 3
-to_process = remaining_collectors[:3]
+# Tomar solo los primeros 2
+to_process = remaining_collectors[:2]
 
 if __name__ == "__main__":
     try:
