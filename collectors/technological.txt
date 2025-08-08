@@ -1,10 +1,9 @@
 head_url = 'https://networkrepository.com/tech.php'
 
 urls_php = [
+    "https://networkrepository.com/tech-pgp.php",
+    "https://networkrepository.com/tech-routers-rf.php",
     "https://networkrepository.com/tech-WHOIS.php",
     "https://networkrepository.com/tech-as-caida2007.php",
-    "https://networkrepository.com/tech-internet-as.php",
-    "https://networkrepository.com/tech-p2p-gnutella.php",
-    "https://networkrepository.com/tech-pgp.php",
-    "https://networkrepository.com/tech-routers-rf.php"
+    "https://networkrepository.com/tech-internet-as.php"
 ]
