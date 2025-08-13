@@ -1,0 +1,10 @@
+head_url = 'https://networkrepository.com/econ.php'
+urls_php = [
+    "https://networkrepository.com/econ-beacxc.php",
+    "https://networkrepository.com/econ-beaflw.php",
+    "https://networkrepository.com/econ-beause.php",
+    "https://networkrepository.com/econ-mahindas.php",
+    "https://networkrepository.com/econ-mbeacxc.php",
+    "https://networkrepository.com/econ-mbeaflw.php",
+    "https://networkrepository.com/econ-mbeause.php"
+]
