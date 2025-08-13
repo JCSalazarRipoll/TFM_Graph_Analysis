@@ -1,1 +1,27 @@
-
+head_url = 'https://networkrepository.com/chem.php'
+urls_php = [
+    "https://networkrepository.com/ENZYMES-g8.php",
+    "https://networkrepository.com/ENZYMES-g123.php",
+    "https://networkrepository.com/ENZYMES-g504.php",
+    "https://networkrepository.com/ENZYMES-g532.php",
+    "https://networkrepository.com/ENZYMES-g597.php",
+    "https://networkrepository.com/ENZYMES-g103.php",
+    "https://networkrepository.com/ENZYMES-g594.php",
+    "https://networkrepository.com/ENZYMES-g355.php",
+    "https://networkrepository.com/ENZYMES-g523.php",
+    "https://networkrepository.com/ENZYMES-g526.php",
+    "https://networkrepository.com/ENZYMES-g575.php",
+    "https://networkrepository.com/ENZYMES-g293.php",
+    "https://networkrepository.com/ENZYMES-g199.php",
+    "https://networkrepository.com/ENZYMES-g279.php",
+    "https://networkrepository.com/ENZYMES-g527.php",
+    "https://networkrepository.com/ENZYMES-g204.php",
+    "https://networkrepository.com/ENZYMES-g224.php",
+    "https://networkrepository.com/ENZYMES-g215.php",
+    "https://networkrepository.com/ENZYMES-g291.php",
+    "https://networkrepository.com/ENZYMES-g578.php",
+    "https://networkrepository.com/ENZYMES-g209.php",
+    "https://networkrepository.com/ENZYMES-g542.php",
+    "https://networkrepository.com/ENZYMES-g194.php",
+    "https://networkrepository.com/ENZYMES-g203.php"
+]
