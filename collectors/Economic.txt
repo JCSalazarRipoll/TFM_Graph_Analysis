@@ -1,10 +1,11 @@
 head_url = 'https://networkrepository.com/econ.php'
 urls_php = [
-    "https://networkrepository.com/econ-beacxc.php",
-    "https://networkrepository.com/econ-beaflw.php",
-    "https://networkrepository.com/econ-beause.php",
     "https://networkrepository.com/econ-mahindas.php",
-    "https://networkrepository.com/econ-mbeacxc.php",
-    "https://networkrepository.com/econ-mbeaflw.php",
-    "https://networkrepository.com/econ-mbeause.php"
+    "https://networkrepository.com/econ-orani678.php",
+    "https://networkrepository.com/econ-psmigr1.php",
+    "https://networkrepository.com/econ-psmigr2.php",
+    "https://networkrepository.com/econ-psmigr3.php",
+    "https://networkrepository.com/econ-wm1.php",
+    "https://networkrepository.com/econ-wm2.php",
+    "https://networkrepository.com/econ-wm3.php",
 ]
