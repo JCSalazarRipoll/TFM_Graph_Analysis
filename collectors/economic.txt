@@ -4,8 +4,5 @@ urls_php = [
     "https://networkrepository.com/econ-orani678.php",
     "https://networkrepository.com/econ-psmigr1.php",
     "https://networkrepository.com/econ-psmigr2.php",
-    "https://networkrepository.com/econ-psmigr3.php",
-    "https://networkrepository.com/econ-wm1.php",
-    "https://networkrepository.com/econ-wm2.php",
-    "https://networkrepository.com/econ-wm3.php",
+    "https://networkrepository.com/econ-psmigr3.php"
 ]
