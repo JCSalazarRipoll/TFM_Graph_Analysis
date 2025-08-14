@@ -1,1 +1,11 @@
+head_url = "https://networkrepository.com/proximity.php"
 
+urls_php = [
+    "https://networkrepository.com/SFHH-conf-sensor.php",
+    "https://networkrepository.com/copresence-InVS13.php",
+    "https://networkrepository.com/copresence-InVS15.php",
+    "https://networkrepository.com/hospital-ward-proximity.php",
+    "https://networkrepository.com/infect-dublin.php",
+    "https://networkrepository.com/infect-hyper.php",
+    "https://networkrepository.com/primary-school-proximity.php"
+]
