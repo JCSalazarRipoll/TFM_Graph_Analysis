@@ -1,11 +1,5 @@
 head_url = "https://networkrepository.com/tscc.php"
 
 urls_php = [
-    "https://networkrepository.com/scc-fb-messages.php",
-    "https://networkrepository.com/scc-twitter-copen.php",
-    "https://networkrepository.com/scc-infect-dublin.php",
-    "https://networkrepository.com/scc-fb-forum.php",
-    "https://networkrepository.com/scc-retweet.php",
-    "https://networkrepository.com/scc-enron-only.php",
     "https://networkrepository.com/scc-infect-hyper.php"
 ]
