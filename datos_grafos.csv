@@ -125,4 +125,4 @@ hospital-ward-proximity,"""https://networkrepository.com/proximity.php""",75,32.
 infect-dublin,"""https://networkrepository.com/proximity.php""",410,2.8K,0.0329775,50,1,13.0,0.225752,21.3K,52.0,280,0.455824,0.435693,18,9,3.630854553044308,0.1130342790000042
 infect-hyper,"""https://networkrepository.com/proximity.php""",113,2.2K,0.347029,98,1,38.0,-0.12258,50.6K,447.0,1.7K,0.534756,0.495205,29,15,1.6562895069532235,0.0046780119999993
 primary-school-proximity,"""https://networkrepository.com/proximity.php""",242,125.8K,4.31306,2.6K,130,1.0,0.353984,122.6M,506.7,1.9M,1.03812,0.752097,867,25,0.0,0.0
-scc-infect-hyper,"""https://networkrepository.com/tscc.php""",113,6.2K,0.983249,112,85,110,-0.0619785,670.6K,5.9,6.1K,0.986349,0.986032,106,106,1.0167509481668773,0.004143936999994935
+scc-infect-hyper,"""https://networkrepository.com/tscc.php""",113,6.2K,0.983249,112,85,110.0,-0.0619785,670.6K,5.9,6.1K,0.986349,0.986032,106,106,1.0167509481668773,0.0041439369999949
