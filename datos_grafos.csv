@@ -118,10 +118,10 @@ econ_orani678,https://networkrepository.com/econ.php,2.5K,89.9K,0.0281378,1.7K,2
 econ_psmigr1,https://networkrepository.com/econ.php,3.1K,540K,0.109577,4.8K,5,343.0,-0.147258,171.3M,54.6,947K,0.67464,0.367109,371,140,1.924067058558549,77.46780503400001
 econ_psmigr2,https://networkrepository.com/econ.php,3.1K,540K,0.109577,4.8K,5,343.0,-0.147258,171.3M,54.6,947K,0.67464,0.367109,371,140,1.924067058558549,77.30354875899997
 econ_psmigr3,https://networkrepository.com/econ.php,3.1K,540K,0.109577,4.8K,5,343.0,-0.147258,171.3M,54.6,947K,0.67464,0.367109,371,140,1.924067058558549,82.10579495999997
-SFHH-conf-sensor,"""https://networkrepository.com/proximity.php""",403,70.3K,0.867388,2.4K,2,348,0.412619,26.1M,64.7,1.1M,1.11415,0.491221,1,11,0.0,0.0
-copresence-InVS13,"""https://networkrepository.com/proximity.php""",95,394.2K,88.2972,27.5K,420,8.3,0.257098,4.3,45.3,171.7M,2.00591,0.900673,9,106,1.1231802911534154,0.021240591000008635
-copresence-InVS15,"""https://networkrepository.com/proximity.php""",219,1.3M,53.7554,39.9K,1,11.7,2.78976,18.3,83.7,392.4M,1.5979,0.880948,16,66,1.3010766201667294,0.16160139400000162
-hospital-ward-proximity,"""https://networkrepository.com/proximity.php""",75,32.4K,11.6843,4.3K,12,864,0.0862321,47M,626.5,3.8M,3.64924,0.7538,1,72,0.0,0.0
-infect-dublin,"""https://networkrepository.com/proximity.php""",410,2.8K,0.0329775,50,1,13,0.225752,21.3K,52,280,0.455824,0.435693,18,9,3.630854553044308,0.11303427900000429
-infect-hyper,"""https://networkrepository.com/proximity.php""",113,2.2K,0.347029,98,1,38,-0.12258,50.6K,447,1.7K,0.534756,0.495205,29,15,1.6562895069532237,0.0046780119999993985
-primary-school-proximity,"""https://networkrepository.com/proximity.php""",242,125.8K,4.31306,2.6K,130,1,0.353984,122.6M,506.7,1.9M,1.03812,0.752097,867,25,0.0,0.0
+SFHH-conf-sensor,"""https://networkrepository.com/proximity.php""",403,70.3K,0.867388,2.4K,2,348.0,0.412619,26.1M,64.7,1.1M,1.11415,0.491221,1,11,0.0,0.0
+copresence-InVS13,"""https://networkrepository.com/proximity.php""",95,394.2K,88.2972,27.5K,420,8.3,0.257098,4.3,45.3,171.7M,2.00591,0.900673,9,106,1.1231802911534154,0.0212405910000086
+copresence-InVS15,"""https://networkrepository.com/proximity.php""",219,1.3M,53.7554,39.9K,1,11.7,2.78976,18.3,83.7,392.4M,1.5979,0.880948,16,66,1.3010766201667294,0.1616013940000016
+hospital-ward-proximity,"""https://networkrepository.com/proximity.php""",75,32.4K,11.6843,4.3K,12,864.0,0.0862321,47M,626.5,3.8M,3.64924,0.7538,1,72,0.0,0.0
+infect-dublin,"""https://networkrepository.com/proximity.php""",410,2.8K,0.0329775,50,1,13.0,0.225752,21.3K,52.0,280,0.455824,0.435693,18,9,3.630854553044308,0.1130342790000042
+infect-hyper,"""https://networkrepository.com/proximity.php""",113,2.2K,0.347029,98,1,38.0,-0.12258,50.6K,447.0,1.7K,0.534756,0.495205,29,15,1.6562895069532235,0.0046780119999993
+primary-school-proximity,"""https://networkrepository.com/proximity.php""",242,125.8K,4.31306,2.6K,130,1.0,0.353984,122.6M,506.7,1.9M,1.03812,0.752097,867,25,0.0,0.0
