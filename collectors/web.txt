@@ -5,6 +5,5 @@ urls_php = [
     "https://networkrepository.com/web-webbase-2001.php",
     "https://networkrepository.com/web-spam.php",
     "https://networkrepository.com/web-indochina-2004.php",
-    "https://networkrepository.com/web-frwikinews-user-edits.php",
-    "https://networkrepository.com/web-sk-2005.php"
+    "https://networkrepository.com/web-frwikinews-user-edits.php"
 ]
