@@ -1,6 +1,5 @@
 head_url = 'https://networkrepository.com/soc.php'
 urls_php = [
-    'https://networkrepository.com/soc-gemsec-HR.php',
     'https://networkrepository.com/soc-twitter-follows.php',
     'https://networkrepository.com/fb-pages-sport.php',
     'https://networkrepository.com/soc-anybeat.php',
