@@ -1,0 +1,67 @@
+head_url = "https://networkrepository.com/dimacs.php"
+
+urls_php = [
+    "https://networkrepository.com/p-hat1500-3.php",
+    "https://networkrepository.com/p-hat1500-2.php",
+    "https://networkrepository.com/p-hat1500-1.php",
+    "https://networkrepository.com/p-hat1000-3.php",
+    "https://networkrepository.com/p-hat1000-2.php",
+    "https://networkrepository.com/p-hat1000-1.php",
+    "https://networkrepository.com/p-hat700-3.php",
+    "https://networkrepository.com/p-hat700-2.php",
+    "https://networkrepository.com/p-hat700-1.php",
+    "https://networkrepository.com/p-hat500-3.php",
+    "https://networkrepository.com/p-hat500-2.php",
+    "https://networkrepository.com/p-hat500-1.php",
+    "https://networkrepository.com/p-hat300-3.php",
+
+    "https://networkrepository.com/brock800-1.php",
+    "https://networkrepository.com/brock800-2.php",
+    "https://networkrepository.com/brock800-3.php",
+    "https://networkrepository.com/brock800-4.php",
+    "https://networkrepository.com/brock400-1.php",
+    "https://networkrepository.com/brock400-2.php",
+    "https://networkrepository.com/brock400-3.php",
+    "https://networkrepository.com/brock400-4.php",
+    "https://networkrepository.com/brock200-1.php",
+    "https://networkrepository.com/brock200-2.php",
+    "https://networkrepository.com/brock200-3.php",
+    "https://networkrepository.com/brock200-4.php",
+
+    "https://networkrepository.com/hamming10-2.php",
+    "https://networkrepository.com/hamming10-4.php",
+    "https://networkrepository.com/hamming8-2.php",
+    "https://networkrepository.com/hamming8-4.php",
+    "https://networkrepository.com/hamming6-2.php",
+    "https://networkrepository.com/hamming6-4.php",
+
+    "https://networkrepository.com/C1000-9.php",
+    "https://networkrepository.com/C1000-9.php",
+    "https://networkrepository.com/C1000-9.php",
+    "https://networkrepository.com/C1000-9.php",
+    "https://networkrepository.com/C1000-9.php",
+    "https://networkrepository.com/C1000-9.php",
+    "https://networkrepository.com/C1000-9.php",
+    "https://networkrepository.com/C1000-9.php",
+    "https://networkrepository.com/C1000-9.php",
+    "https://networkrepository.com/C1000-9.php",
+
+    "https://networkrepository.com/san1000.php",
+
+    "https://networkrepository.com/san400-0-9-1.php",
+    "https://networkrepository.com/san400-0-7-1.php",
+    "https://networkrepository.com/san400-0-7-2.php",
+    "https://networkrepository.com/san400-0-7-3.php",
+    "https://networkrepository.com/san400-0-5-1.php",
+
+    "https://networkrepository.com/san200-0-9-1.php",
+    "https://networkrepository.com/san200-0-9-2.php",
+    "https://networkrepository.com/san200-0-9-3.php",
+    "https://networkrepository.com/san200-0-7-2.php",
+    "https://networkrepository.com/san200-0-7-1.php",
+
+    "https://networkrepository.com/sanr200-0-9.php",
+    "https://networkrepository.com/sanr200-0-7.php",
+    "https://networkrepository.com/sanr400-0-5.php",
+    "https://networkrepository.com/sanr400-0-7.php"
+]
