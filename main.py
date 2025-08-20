@@ -24,7 +24,7 @@ logging.basicConfig(
     ]
 )
 
-carpeta = Path("collectors")
+carpeta = Path("graphs")
 archivos_txt = sorted(carpeta.glob("*.txt"))  # Todos los .txt ordenados alfabéticamente
 
 # Ruta del archivo donde se guardan los datos procesados
