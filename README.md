@@ -1,9 +1,9 @@
-# TFM - Estimación de la Distancia Promedio en Grafos Masivos 🔗📐
+# TFM - Estimación de la Distancia Promedio en Grafos Masivos
 
 Este repositorio contiene el desarrollo del Trabajo de Fin de Máster (TFM) de Juan Camilo Salazar Ripoll, centrado en el estudio de la distancia promedio entre nodos en grafos de distintos tamaños, 
 con especial énfasis en grafos masivos como los de Facebook y YouTube.
 
-## 🎯 Objetivo del proyecto
+## Objetivo del proyecto
 
 El objetivo principal es analizar 204 grafos de diferentes tamaños para estudiar cómo se puede calcular o estimar la **distancia promedio entre nodos**. 
 Dado que en grafos masivos este valor no se puede calcular directamente por su alto costo computacional, se exploran distintas técnicas de estimación y modelos aproximados para evaluar su precisión y eficiencia.
