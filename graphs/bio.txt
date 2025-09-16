@@ -1,7 +1,6 @@
-head_url = 'https://networkrepository.com/bio.php'
-urls_php = [
-    'https://networkrepository.com/bio-SC-CC.php',
-    'https://networkrepository.com/bio-dmela.php',
-    'https://networkrepository.com/bio-celegans-dir.php',
-    'https://networkrepository.com/bio-diseasome.php'
+grafos_zip = [
+    'https://nrvis.com/download/data/bio/bio-SC-CC.zip',
+    'https://nrvis.com/download/data/bio/bio-dmela.zip',
+    'https://nrvis.com/download/data/bio/bio-celegans-dir.zip',
+    'https://nrvis.com/download/data/bio/bio-diseasome.zip'
 ]
