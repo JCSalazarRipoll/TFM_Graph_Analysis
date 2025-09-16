@@ -1,5 +1,4 @@
-head_url = 'https://networkrepository.com/bhoslib.php'
-urls_php = [
+grafos_zip = [
     "https://networkrepository.com/frb30-15-2.php",
     "https://networkrepository.com/frb30-15-4.php",
     "https://networkrepository.com/frb30-15-1.php",
